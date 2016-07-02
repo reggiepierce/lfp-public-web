@@ -24,11 +24,17 @@
 	window.onafterprint = afterPrint;
 }());
 var beforePrintCallbacks = [];
-beforePrint = function(callback) {
-	beforePrintCallbacks.push(callback);
-}
+
+(function() {
+	beforePrint = function(callback) {
+		beforePrintCallbacks.push(callback);
+	};
+}());
 
 var afterPrintCallbacks = [];
-afterPrint = function(callback) {
-	afterPrintCallbacks.push(callback);
-}
+
+(function() {
+	afterPrint = function(callback) {
+		afterPrintCallbacks.push(callback);
+	};
+}());
