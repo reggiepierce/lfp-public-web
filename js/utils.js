@@ -1,9 +1,9 @@
 (function() {
     var beforePrint = function() {
-        fireListeners(printListener.beforePrint);
+        fireListeners(printListener.beforePrintListeners);
     };
     var afterPrint = function() {
-        fireListeners(printListener.afterPrint);
+        fireListeners(printListener.afterPrintListeners);
     };
 
     if (window.matchMedia) {
@@ -21,8 +21,16 @@
 }());
 
 var printListener = {
-    beforePrint = [],
-    afterPrint = [],
+    beforePrintListeners = [],
+    afterPrintListeners = [],
+	beforePrint=function(listener){
+		beforePrintListeners.push(listener);
+	},
+	afterPrint=function(listener){
+		afterPrintListeners.push(listener);
+	},
+	
+	
 }
 
 function fireListeners(arr) {
