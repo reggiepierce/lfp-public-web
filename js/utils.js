@@ -1,9 +1,13 @@
 (function() {
 	var beforePrint = function() {
-		fireListeners(beforePrintListeners);
+		for (i = 0; i < beforePrintCallbacks.length; i++) {
+			beforePrintCallbacks[i]();
+		}
 	};
 	var afterPrint = function() {
-		fireListeners(afterPrintListeners);
+		for (i = 0; i < afterPrintCallbacks.length; i++) {
+			afterPrintCallbacks[i]();
+		}
 	};
 
 	if (window.matchMedia) {
@@ -19,18 +23,12 @@
 	window.onbeforeprint = beforePrint;
 	window.onafterprint = afterPrint;
 }());
-var beforePrintListeners = [];
+var beforePrintCallbacks = [];
 beforePrint = function(callback) {
-	beforePrintListeners.push(listener);
+	beforePrintCallbacks.push(callback);
 }
 
-var afterPrintListeners = [];
+var afterPrintCallbacks = [];
 afterPrint = function(callback) {
-	afterPrintListeners.push(listener);
-}
-
-function fireListeners(arr) {
-	for (i = 0; i < arr.length; i++) {
-		arr[i].fire();
-	}
+	afterPrintCallbacks.push(callback);
 }
