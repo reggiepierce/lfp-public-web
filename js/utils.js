@@ -23,18 +23,24 @@
 	window.onbeforeprint = beforePrint;
 	window.onafterprint = afterPrint;
 }());
-var beforePrintCallbacks = [];
 
-(function() {
-	beforePrint = function(callback) {
-		beforePrintCallbacks.push(callback);
-	};
-}());
+var beforePrintCallbacks = [];
+jQuery.beforePrintListener = function beforePrintListener(callback) {
+	beforePrintCallbacks.push(callback);
+}
 
 var afterPrintCallbacks = [];
+jQuery.afterPrintListener = function afterPrintListener(callback) {
+	afterPrintCallbacks.push(callback);
+}
 
-(function() {
-	afterPrint = function(callback) {
-		afterPrintCallbacks.push(callback);
-	};
-}());
+jQuery.clickAndEnterEvent = function clickAndEnterEvent($jqueryEl, event) {
+	$jqueryEl.click(function() {
+		event();
+	})
+	$jqueryEl.keypress(function(e) {
+		if (e.which == 13) {// Enter key pressed
+			$jqueryEl.click();// Trigger search button click event
+		}
+	});
+}
