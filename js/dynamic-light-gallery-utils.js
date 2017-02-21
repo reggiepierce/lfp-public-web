@@ -7,10 +7,6 @@ function showLightGallary(elementToLightGallery, startIndex, srcToThumbMap) {
         el.thumb = thumb;
         dynamicElArr.push(el);
     }
-    var previousLightGallery = $(this).data('lightGallery');
-    if (previousLightGallery) {
-        previousLightGallery.destroy(true);
-    }
     elementToLightGallery.lightGallery({
         dynamic: true,
         dynamicEl: dynamicElArr,
