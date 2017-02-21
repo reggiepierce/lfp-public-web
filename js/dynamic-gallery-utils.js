@@ -1,5 +1,8 @@
-function showLightGallary(elementToLightGallery, startIndex, srcToThumbMap) {
+function showLightGallary(elementToLightGallery, startIndex, srcToThumbMap, addClassName) {
     var dynamicElArr = [];
+    if(typeof value === "undefined" || value === null){
+        addClassName='';
+    }
     for (var src in srcToThumbMap) {
         var thumb = srcToThumbMap[src];
         var el = {};
@@ -10,6 +13,7 @@ function showLightGallary(elementToLightGallery, startIndex, srcToThumbMap) {
     elementToLightGallery.lightGallery({
         dynamic: true,
         dynamicEl: dynamicElArr,
-        index: startIndex
+        index: startIndex,
+        addClass: addClassName
     })
 }
