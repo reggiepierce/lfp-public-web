@@ -6,9 +6,6 @@ function showLightGallary(startIndex, srcToThumbMap) {
 		el.src = src;
 		el.thumb = thumb;
 		dynamicElArr.push(el);
-		if (clickedSrc === src) {
-			startIndex = srcs.length - 1;
-		}
 	}
 	$(this).lightGallery({
 		dynamic : true,
