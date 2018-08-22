@@ -6780,3 +6780,7 @@ TH {
 
 
 /*# sourceMappingURL=ui.min.css.map */
+
+.pod .container-subpod-info{
+	display: none;
+}
