@@ -16,5 +16,4 @@ function showLightGallery(elementToLightGallery, startIndex, srcToThumbMap, addC
         addClass: addClassName
     })
     elementToLightGallery.data('lightGallery').index = startIndex;
-    elementToLightGallery.data('lightGallery').slide(startIndex);
 }
