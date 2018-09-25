@@ -1,7 +1,11 @@
 function showLightGallery(elementToLightGallery, startIndex, srcToThumbMap, addClassName) {
+    var existing = elementToLightGallery.data('lightGallery');
+    if (existing) {
+        existing.destroy();
+    }
     var dynamicElArr = [];
-    if(typeof addClassName === "undefined" || addClassName === null){
-        addClassName='';
+    if (typeof addClassName === "undefined" || addClassName === null) {
+        addClassName = '';
     }
     for (var src in srcToThumbMap) {
         var thumb = srcToThumbMap[src];
