@@ -1,8 +1,4 @@
 function showLightGallery(elementToLightGallery, startIndex, srcToThumbMap, addClassName) {
-    var existing = elementToLightGallery.data('lightGallery');
-    if (existing) {
-        existing.destroy(true);
-    }
     var dynamicElArr = [];
     if (typeof addClassName === "undefined" || addClassName === null) {
         addClassName = '';
@@ -17,7 +13,8 @@ function showLightGallery(elementToLightGallery, startIndex, srcToThumbMap, addC
     elementToLightGallery.lightGallery({
         dynamic: true,
         dynamicEl: dynamicElArr,
-        index: startIndex,
         addClass: addClassName
     })
+    elementToLightGallery.data('lightGallery').index = startIndex;
+    elementToLightGallery.data('lightGallery').slide(startIndex);
 }
