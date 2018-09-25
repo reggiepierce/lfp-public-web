@@ -1,7 +1,7 @@
 function showLightGallery(elementToLightGallery, startIndex, srcToThumbMap, addClassName) {
     var existing = elementToLightGallery.data('lightGallery');
     if (existing) {
-        existing.destroy();
+        existing.destroy(true);
     }
     var dynamicElArr = [];
     if (typeof addClassName === "undefined" || addClassName === null) {
