@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'lassoFont';
+    src: url('AkzidenzGroteskBE-Regular.eot');
+    src: local('Berthold Akzidenz-Grotesk Regular'), local('AkzidenzGroteskBE-Regular'),
+        url('AkzidenzGroteskBE-Regular.eot?#iefix') format('embedded-opentype'),
+        url('AkzidenzGroteskBE-Regular.woff2') format('woff2'),
+        url('AkzidenzGroteskBE-Regular.woff') format('woff'),
+        url('AkzidenzGroteskBE-Regular.ttf') format('truetype'),
+        url('AkzidenzGroteskBE-Regular.svg#AkzidenzGroteskBE-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lassoFontMedium';
+    src: url('AkzidenzGroteskBE-Md.eot');
+    src: local('Berthold Akzidenz-Grotesk Medium'), local('AkzidenzGroteskBE-Md'),
+        url('AkzidenzGroteskBE-Md.eot?#iefix') format('embedded-opentype'),
+        url('AkzidenzGroteskBE-Md.woff2') format('woff2'),
+        url('AkzidenzGroteskBE-Md.woff') format('woff'),
+        url('AkzidenzGroteskBE-Md.ttf') format('truetype'),
+        url('AkzidenzGroteskBE-Md.svg#AkzidenzGroteskBE-Md') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lassoFontBold';
+    src: url('AkzidenzGroteskBE-Bold.eot');
+    src: local('Berthold Akzidenz-Grotesk Bold'), local('AkzidenzGroteskBE-Bold'),
+        url('AkzidenzGroteskBE-Bold.eot?#iefix') format('embedded-opentype'),
+        url('AkzidenzGroteskBE-Bold.woff2') format('woff2'),
+        url('AkzidenzGroteskBE-Bold.woff') format('woff'),
+        url('AkzidenzGroteskBE-Bold.ttf') format('truetype'),
+        url('AkzidenzGroteskBE-Bold.svg#AkzidenzGroteskBE-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
